@@ -72,5 +72,5 @@ export type FilterState = {
   brands: string[];
   inStock: boolean;
   onSale: boolean;
-  sortBy: "price-asc" | "price-desc" | "name-asc" | "name-desc" | "";
+  sortBy: "" | "price-asc" | "price-desc" | "name-asc" | "name-desc";
 };

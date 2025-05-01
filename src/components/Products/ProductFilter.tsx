@@ -84,7 +84,7 @@ export default function ProductFilter({ onFilterChange, minMaxPrice, initialFilt
     });
   };
 
-  const handleSortChange = (value: string) => {
+  const handleSortChange = (value: FilterState['sortBy']) => {
     setFilters({
       ...filters,
       sortBy: value,
@@ -223,7 +223,7 @@ export default function ProductFilter({ onFilterChange, minMaxPrice, initialFilt
           <select 
             className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
             value={filters.sortBy}
-            onChange={(e) => handleSortChange(e.target.value)}
+            onChange={(e) => handleSortChange(e.target.value as FilterState['sortBy'])}
           >
             <option value="">Relevance</option>
             <option value="price-asc">Price: Low to High</option>
